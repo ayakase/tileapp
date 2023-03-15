@@ -75,7 +75,7 @@
 
 .header-main {
   height: 45px;
-  background-color: #f04b4c;
+  background-color: #0082b6;
   width: 70%;
   display: flex;
   justify-content: center;
@@ -99,7 +99,7 @@
 }
 
 .header-main-item:hover {
-  background-color: #b63b3b;
+  background-color: #00e1ff;
   transition: all 0.5s;
 }
 
@@ -404,6 +404,11 @@
   flex-direction: column;
   align-items: center;
   flex: 0.2;
+  transition: all .2s ease-in-out;
+}
+
+.home-about-content-it:hover {
+  transform: scale(1.1);
 }
 
 .home-about-content-it-ic {
@@ -701,7 +706,8 @@
   padding: 15px;
 }
 
-.contact-col-right input, .contact-col textarea {
+.contact-col-right input,
+.contact-col textarea {
   width: 100%;
   padding: 15px;
   margin-bottom: 17px;
@@ -898,8 +904,8 @@ form .category label .dot {
   transition: all 0.3s ease;
 }
 
-#dot-1:checked ~ .category label .one,
-#dot-2:checked ~ .category label .two {
+#dot-1:checked~.category label .one,
+#dot-2:checked~.category label .two {
   background: #f80000;
   border-color: #d9d9d9;
 }
@@ -1372,18 +1378,22 @@ th:last-child {
   font-family: GoogleSans;
   src: url("../fonts/GoogleSans-Regular.otf");
 }
+
 @font-face {
   font-family: GoogleSans-Bold;
   src: url("../fonts//GoogleSans-Bold.otf");
 }
+
 @font-face {
   font-family: GoogleSans-Italic;
   src: url("../fonts/GoogleSans-Italic.otf");
 }
+
 @font-face {
   font-family: GoogleSans-Light;
   src: url("../fonts/GoogleSans-Light.otf");
 }
+
 body {
   font-family: GoogleSans;
   margin: 0;

@@ -4,7 +4,7 @@
   "description": "isd project",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon --inspect src/resource/server.js",
+    "start": "nodemon --inspect src/resource /server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "sass src/resource/scss/app.scss src/public/css/app.css --watch"
   },
