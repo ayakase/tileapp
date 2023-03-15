@@ -1,0 +1,20 @@
+.t-btn {
+    background-color: rgb(76, 120, 190);
+    border-radius: 5px;
+    height: 32px;
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: normal;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: center;
+    outline: unset;
+    border: none;
+    cursor: pointer;
+    min-width: 80px;
+}
+
+.t-btn:hover {
+    background-color: rgb(240, 75, 76);
+    transition: all 0.25s;
+}

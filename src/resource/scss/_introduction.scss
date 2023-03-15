@@ -1,0 +1,83 @@
+.intro-content {
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+    text-align: center;
+}
+.intro-content-it-top {
+    flex-basis: 65%;
+    display: flex;
+    padding: 10px;
+}
+
+.intro-content-it-top-left {
+    flex: 0.5;
+}
+
+.intro-content-it-top-right {
+    flex: 0.5;
+}
+.intro-content-img img {
+    width: 50%;
+}
+.intro-content-des {
+    display: flex;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(240, 75, 76);
+}
+.intro-content-des-it {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 0.2;
+}
+.intro-content-des-h1 {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+}
+.intro-content-des-h2 {
+    font-size: 13px;
+    font-weight: thin;
+    text-align: center;
+}
+.intro-header-content {
+    color: rgb(240, 75, 76);
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.intro-body-content {
+    display: flex;
+    justify-content: center;
+}
+
+.intro-content-it {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0.2;
+}
+
+.intro-content-it-ic {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(76, 120, 190);
+    margin: 10px;
+    text-align: center;
+}
+
+.intro-content-it-ct {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.intro-content-it-des {
+    font-size: 13px;
+    font-weight: thin;
+    text-align: center;
+}

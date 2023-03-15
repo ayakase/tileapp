@@ -1,0 +1,48 @@
+@import 'header';
+@import 'components/button';
+@import 'components/input';
+@import 'components/search-input';
+@import 'homepage';
+@import 'footer';
+@import 'contact';
+@import 'introduction';
+@import 'register';
+@import 'recruitment';
+@import 'news';
+@import 'products';
+@import 'products_details';
+@import 'cart';
+@import 'cusInfo';
+@import 'cusPackage';
+@import 'editCusInfo';
+
+@font-face {
+    font-family: GoogleSans;
+    src: url('../fonts/GoogleSans-Regular.otf');
+}
+
+@font-face {
+    font-family: GoogleSans-Bold;
+    src: url('../fonts//GoogleSans-Bold.otf');
+}
+
+@font-face {
+    font-family: GoogleSans-Italic;
+    src: url('../fonts/GoogleSans-Italic.otf');
+}
+
+@font-face {
+    font-family: GoogleSans-Light;
+    src: url('../fonts/GoogleSans-Light.otf');
+}
+
+body {
+    font-family: GoogleSans;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    margin: 20px;
+}

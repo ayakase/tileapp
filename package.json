@@ -1,0 +1,33 @@
+{
+  "name": "isd",
+  "version": "1.0.0",
+  "description": "isd project",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon --inspect src/resource/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass src/resource/scss/app.scss src/public/css/app.css --watch"
+  },
+  "keywords": [
+    "ISD",
+    "project",
+    "web"
+  ],
+  "author": "An Vu",
+  "license": "ISC",
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "cookie": "^0.4.2",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-handlebars": "^5.3.4",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15",
+    "sass": "^1.49.9"
+  }
+}

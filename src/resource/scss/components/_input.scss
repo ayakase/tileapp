@@ -1,0 +1,18 @@
+.t-input {
+    height: 28px;
+    border-radius: 5px 5px 5px 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    border: 1px solid #c5c9fa;
+    outline: unset;
+}
+
+.t-input::placeholder {
+    font-size: 11px;
+    color: #bbbbbb;
+}
+
+.t-input:focus {
+    border-color: #213159;
+}

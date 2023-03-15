@@ -1,0 +1,39 @@
+.t-search {
+    display: flex;
+    align-items: center;
+}
+
+.t-search-input {
+    height: 28px;
+    border-radius: 5px 0 0 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    border: 1px solid #c5c9fa;
+    outline: unset;
+}
+
+.t-search-input::placeholder{
+    font-size: 11px;
+    color: #bbbbbb;
+}
+
+.t-search-input:focus {
+    border-color: #213159;
+}
+
+.t-search-btn {
+    height: 32px;
+    width: 32px;
+    background-color: #4c78be;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 0 5px 5px 0;
+}
+
+.t-search-btn:hover {
+    background-color: rgb(240, 75, 76);
+    transition: all 0.25s;
+}

@@ -1,0 +1,36 @@
+.news-it {
+    padding: 10px 150px 0px 150px;
+}
+
+.news-box {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    position: relative;
+    padding-bottom: 20px;
+    box-shadow: 0 5px 10px rgba(255, 0, 0, 0.15);
+    transition: width 1s;
+}
+
+.news-box:hover {
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(255, 0, 0, 0.30);
+}
+
+.news-img {
+    width: 50%;
+    margin-right: 40px;
+}
+
+.news-details {
+    width: 50%;
+}
+
+.news-details h4 {
+    color: rgb(76, 120, 190);
+    cursor: pointer;
+}
+
+.news-box h1 {
+    color: rgba(76, 120, 190, 0.6);
+}

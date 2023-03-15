@@ -1,0 +1,107 @@
+<div class="products">
+    <div class="home-banner">
+        <div class="home-banner-content"></div>
+    </div>
+    <div class="products-container">
+        <h2 class="title">TẤT CẢ SẢN PHẨM</h2>
+        <div class="main-product-content">
+            <div class="products-container-items-ct">
+                {{#each items}}
+                <div class="col-4">
+                    <img src="{{this.product_image}}" alt="Gạch lát nền">
+                    <h4 onclick="location.href = '/products_details'" style="cursor: pointer;">{{this.product_name}}</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>Liên hệ</p>
+                </div>
+                {{else}}
+                {{/each}}
+            </div>
+            <div class="products-sort">
+                <h2>Danh mục sản phẩm</h2>
+                <div class="products-category">
+                    {{#each category}}
+                    <div class="products-category-item" onclick="location.href = '/category/' + {{{this.category_no}}}">{{this.category_name}}</div>
+                    {{else}}
+                    {{/each}}
+                    <div class="products-category-item-last"></div>
+                </div>
+            </div>
+        </div>
+        <div class="page-btn">
+            <span>&#8592;</span>
+            <span class="page-number1"></span>
+            <span class="page-number2"></span>
+            <span class="page-number3"></span>
+            <span>&#8594;</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    var items = {{{ json items}}};
+    var a_page = $(".page-number1");
+    var b_page = $(".page-number2");
+    var c_page = $(".page-number3");
+    if(items.length < 12) {
+        c_page.css("display", "none");
+    }
+    var sPath = window.location.pathname;
+    var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+    if (sPage === 'products' || sPage == 1) {
+        a_page.text("1");
+        b_page.text("2");
+        c_page.text("3");
+        a_page.css({
+            'color': '#fff',
+            'background': 'rgb(240, 75, 76)'
+        }
+        );
+    } else {
+        a_page.text((parseInt(sPage) - 1).toString());
+        b_page.text(sPage);
+        c_page.text((parseInt(sPage) + 1).toString());
+        b_page.css({
+            'color': '#fff',
+            'background': 'rgb(240, 75, 76)'
+        }
+        );
+        a_page.css({
+            'color': 'rgb(240, 75, 76)',
+            'background': '#fff'
+        }
+        );
+    }
+
+
+    a_page.click(() => {
+        var page_num = a_page.text();
+        location.href = "/products/page/" + page_num;
+    });
+    b_page.click(() => {
+        var page_num = b_page.text();
+        location.href = "/products/page/" + page_num;
+        b_page.css({
+            'color': '#fff',
+            'background': 'rgb(240, 75, 76)'
+        }
+        );
+        a_page.css({
+            'color': 'rgb(240, 75, 76)',
+            'background': '#fff'
+        }
+        );
+    });
+    c_page.click(() => {
+        var page_num = c_page.text();
+        location.href = "/products/page/" + page_num;
+
+    });
+
+</script>

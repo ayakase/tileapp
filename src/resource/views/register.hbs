@@ -1,0 +1,64 @@
+<div class="register">
+    <div class="register-banner"></div>
+    <div class="container">
+        <div class="title">Đăng Kí</div>
+        <div class="content">
+            <form method="POST" action="/register/sign-up">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Họ và Tên</span>
+                        <input type="text" name="fullname" id="name" placeholder="Điền họ và tên" required>
+                        <div class="error" id="nameErr"></div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Tên Đăng Nhập</span>
+                        <input type="text" name="userName" id="account" placeholder="Điền tên truy cập" required>
+                        <div class="error" id="accountErr"></div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Địa Chỉ Email</span>
+                        <input type="text" name="email" id="email" placeholder="Điền địa chỉ Email" required>
+                        <div class="error" id="emailErr"></div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Số Điện Thoại</span>
+                        <input type="text" name="phone" id="mobile" placeholder="Điền số điện thoại" required>
+                        <div class="error" id="mobileErr"></div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Mật Khẩu</span>
+                        <input type="password" name="signUpPass" id="password" placeholder="Điền mật khẩu" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Xác Nhận Mật Khẩu</span>
+                        <input type="password" name="signUpConfirmPass" id="confirm-password" placeholder="Xác nhận mật khẩu" required>
+                    </div>
+                </div>
+                <div class="type-details">
+                    <input type="radio" name="gender" id="dot-1">
+                    <input type="radio" name="gender" id="dot-2">
+                    <span class="gender-title">Khách Hàng</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Cá Nhân</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Công Ty</span>
+                        </label>
+                    </div>
+                </div>
+                <p id="message"></p>
+                <div class="button">
+                    <input type="submit" value="Đăng Kí" >
+                </div>
+            </form>
+            <div class="login-signup">
+                <span class="text">Bạn đã là thành viên?
+                    <a href="/" class="text signup-link">Trở về trang chủ</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

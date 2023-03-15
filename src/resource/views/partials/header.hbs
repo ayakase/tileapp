@@ -1,0 +1,108 @@
+<div class="header">
+    <div class="header-left">
+        <div class="header-logo" onclick="location.href = '/'"></div>
+    </div>
+    <div class="header-center">
+        <div class="header-center-logo" onclick="location.href = '/'"></div>
+    </div>
+    <div class="header-right">
+        <div class="header-item header-login">
+            <div class="login-popup-parent">
+                <i class="fa-solid fa-user"></i>
+                <div style="padding-left: 5px;">Đăng nhập</div>
+            </div>
+            <div class="login-popup">
+                <form class="login-form" method="POST">
+                    <div class="login-form-top">
+                        <div class="login-form-topleft">
+                            <label style="margin-bottom: 15px;">Tài Khoản:</label>
+                            <label style="margin-bottom: 3px;">Mật khẩu:</label>
+                        </div>
+                        <div class="login-form-topright">
+                            <input id="login_user_account" style="margin-bottom: 5px;" type="text" class="t-input"
+                                name="user_account" placeholder="Nhập tài khoản">
+                            <input type="password" class="t-input" name="user_password" placeholder="Nhập mật khẩu">
+                        </div>
+                    </div>
+                    <div class="login-errorLog"></div>
+                    <div class="login-form-bot">
+                        <div class="login-form-botleft">
+                            <button class="t-btn" style="width: 96px">Đăng nhập</button>
+                        </div>
+                        <div class="login-form-botright">
+                            <div class="forgotpwd-site" onclick="location.href = '/register'" style="cursor: pointer;">
+                                Quên mật khẩu?</div>
+                            <div class="register-site" onclick="location.href = '/register'" style="cursor: pointer;">
+                                Đăng kí</div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="header-item header-user">
+            <div class="user-dropdown-parent">
+                <i class="fa-solid fa-user"></i>
+                <div id="user-name" style="padding-left: 5px;"></div>
+            </div>
+            <div class="user-dropdown">
+                <div class="user-dropdown-it user-info" onclick="location.href = '/cusInfo'"><i class="fa-solid fa-circle-user"></i>&nbsp;&nbsp;Thông tin cá
+                    nhân</div>
+                <div class="user-dropdown-it user-info" onclick="location.href = '/cusPackage'"><i class="fa-solid fa-dolly"></i>&nbsp;&nbsp;Đơn hàng của tôi
+                </div>
+                <div class="user-dropdown-it signout" onclick="location.href = '/sign-out'"><i
+                        class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;Đăng xuất</div>
+            </div>
+        </div>
+        <div class="header-item" onclick="location.href = '/cart'" style="cursor: pointer;">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            <div style="padding-left: 5px;">Giỏ hàng</div>
+        </div>
+        <div class="t-search">
+            <input type="text" class="t-search-input" placeholder="Nhập từ khóa muốn tìm kiếm">
+            <button class="t-search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </div>
+</div>
+<div class="header-main">
+    <div class="header-main-item" onclick="location.href = '/'">TRANG CHỦ</div>
+    <div class="header-main-item" onclick="location.href = '/intro'">GIỚI THIỆU</div>
+    <div id="header-products" class="header-main-item out-products-dropdown">
+        <div onclick="location.href = '/products'">SẢN
+            PHẨM&nbsp;&nbsp;<i class="fa-solid fa-angle-down"></i></div>
+        <div id="header-products-dropdown" class="header-dropdown out-products-dropdown">
+            <div class="header-dropdown-item" onclick="location.href = '/category/1'">Gạch ốp tường</div>
+            <div class="header-dropdown-item" onclick="location.href = '/category/2'">Gạch lát nền</div>
+            <div class="header-dropdown-item" onclick="location.href = '/category/3'">Gạch sàn nước</div>
+            <div class="header-dropdown-item" onclick="location.href = '/category/4'">Gạch trang trí</div>
+        </div>
+    </div>
+    <div id="header-news" class="header-main-item out-news-dropdown" onclick="location.href = '/news'">TIN
+        TỨC&nbsp;&nbsp;<i class="fa-solid fa-angle-down"></i>
+        <div id="header-news-dropdown" class="header-dropdown out-news-dropdown">
+            <div class="header-dropdown-item">Tin khuyến mãi</div>
+            <div class="header-dropdown-item">Tin thị trường</div>
+            <div class="header-dropdown-item">Tin doanh nghiệp</div>
+        </div>
+    </div>
+    <div class="header-main-item" onclick="location.href = '/recruit'">TUYỂN DỤNG</div>
+    <div class="header-main-item" onclick="location.href = '/contact'">LIÊN HỆ</div>
+</div>
+
+<script src="/js/header.js"></script>
+<script>
+    var signed = {{{ json signin }}};
+    var login_err = {{{ json error }}}
+    var login_errLog = {{{ json errorLog }}}
+    var user_acc = {{{ json User }}}
+    if (signed) {
+        $(".header-login").css("display", "none");
+        $(".header-user").css("display", "flex");
+        $('#user-name').text(user_acc);
+    }
+
+    if (login_err) {
+        $(".login-popup").css('display', 'flex');
+        $(".login-errorLog").text(login_errLog);
+        $("#login_user_account").val(user_acc);
+    }
+</script>
